@@ -12,7 +12,7 @@ namespace EF_Core_CRM
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.
-                UseSqlServer("Server=localhost\\SQLEXPRESS;Database=NewTestDatabase;Trusted_Connection=True;TrustServerCertificate=True;");
+                UseSqlServer(Environment.GetEnvironmentVariable("DbConnectionString"));
         }
     }
 }
