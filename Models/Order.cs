@@ -16,6 +16,6 @@ namespace EF_Core_CRM.Models
         public User SalesRepresentative { get; set; }
         public required DateTime OrderDate { get; set; }
         public required decimal TotalAmount { get; set; }
-
+        public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }
