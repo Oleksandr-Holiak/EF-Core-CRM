@@ -5,7 +5,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF_Core_CRM
+namespace EF_Core_CRM.Models
 {
     class User
     {
