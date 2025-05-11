@@ -12,6 +12,7 @@ namespace EF_Core_CRM.Models
         public int Id { get; set; }
         public required int CustomerId { get; set; }
         public required int SalesRepresentativeId { get; set; }
+        public User SalesRepresentative { get; set; }
         public required DateTime OrderDate { get; set; }
         public required decimal TotalAmount { get; set; }
 
