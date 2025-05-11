@@ -12,6 +12,5 @@ namespace EF_Core_CRM.Models
         public required string Name { get; set; }
         public required string Email { get; set; }
         public required string Adress { get; set; }
-        public required int OwnerId { get; set; }
     }
 }
