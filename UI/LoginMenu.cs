@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EF_Core_CRM.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,19 @@ namespace EF_Core_CRM.UI
             else
             {
                 _password = input;
-                return new WorkerMenu();
+
+                bool logInStatus = await AccountManager.LogIn(_login);
+
+                if (logInStatus)
+                {
+                    ConsoleHelper.WriteSuccess("Successfully logged in");
+                    return new WorkerMenu();
+                }
+                else
+                {
+                    ConsoleHelper.WriteError("Wrong email or password");
+                    return new LoginMenu();
+                }
             }
         }
     }

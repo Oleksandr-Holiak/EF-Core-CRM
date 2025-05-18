@@ -17,7 +17,7 @@ namespace EF_Core_CRM.Database
         {
             using EntityDatabase db = new EntityDatabase();
             
-            _account = await db.Customers.Where(u => u.Email == _email).FirstAsync();
+            _account = await db.Customers.Where(u => u.Email == _email).SingleOrDefaultAsync();
             
             if (_account is not null) _account = await db.Users.Where(u => u.Email == _email).FirstAsync();
 
