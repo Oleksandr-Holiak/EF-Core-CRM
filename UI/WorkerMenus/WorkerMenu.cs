@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF_Core_CRM.UI
+namespace EF_Core_CRM.UI.WorkerMenus
 {
     class WorkerMenu : IMenu
     {
