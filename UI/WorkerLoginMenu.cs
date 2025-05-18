@@ -12,30 +12,23 @@ namespace EF_Core_CRM.UI
         private string? _password;
         public async Task Show()
         {
-            if (_login == null)
-            {
-                Console.WriteLine(
-                    "You are trying to login as worker\n" +
-                    "Enter your login");
-            }
-            else if (_password == null)
-            {
-                Console.WriteLine("Enter your password");
-            }
+            Console.WriteLine(
+                "You are trying to login as worker\n" +
+                "Enter your login");
         }
         public async Task<IMenu> Get(string input)
         {
             if (_login == null)
             {
                 _login = input;
+                Console.WriteLine("Enter your password");
                 return this;
             }
-            else if (_password == null)
+            else
             {
                 _password = input;
-                return this;
+                return new WorkerMenu();
             }
-            return new MainMenu();
         }
     }
 }
