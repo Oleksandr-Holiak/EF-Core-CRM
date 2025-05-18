@@ -15,10 +15,14 @@ namespace EF_Core_CRM.UI
         {
             Console.WriteLine(
                 "Log in screen\n" +
-                "Enter your login");
+                "Enter your login or 1 to exit to main menu");
         }
         public async Task<IMenu> Get(string input)
         {
+            int intResult = input.ParseToInt();
+
+            if (intResult == 1) return new MainMenu();
+
             if (_login == null)
             {
                 _login = input;
