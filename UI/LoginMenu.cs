@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using EF_Core_CRM.UI.WorkerMenus;
 namespace EF_Core_CRM.UI
 {
     class LoginMenu : IMenu
