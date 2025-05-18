@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EF_Core_CRM.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,7 @@ namespace EF_Core_CRM.UI
                 case 4:
                     throw new NotImplementedException();
                 case 5:
+                    await AccountManager.LogOut();
                     return new MainMenu();
                 default:
                     ConsoleHelper.WriteError("Wrong selection");

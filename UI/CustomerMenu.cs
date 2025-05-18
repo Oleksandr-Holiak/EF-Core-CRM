@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+﻿using EF_Core_CRM.Database;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace EF_Core_CRM.UI
                 case 1:
                     throw new NotImplementedException();
                 case 2:
+                    await AccountManager.LogOut();
                     return new MainMenu();
                 default:
                     ConsoleHelper.WriteError("Wrong selection");
