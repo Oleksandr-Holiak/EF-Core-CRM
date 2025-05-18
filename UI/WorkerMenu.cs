@@ -35,6 +35,7 @@ namespace EF_Core_CRM.UI
                 case 5:
                     return new MainMenu();
                 default:
+                    ConsoleHelper.WriteError("Wrong selection");
                     return this;
             }
         }
