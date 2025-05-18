@@ -15,7 +15,8 @@ namespace EF_Core_CRM.UI
                 "1.Create new order\n" +
                 "2.Edit order\n" +
                 "3.Track your customer's orders\n" +
-                "4.Create new user");
+                "4.Create new user\n" +
+                "5.Log out and return to main menu");
         }
         public async Task<IMenu> Get(string input)
         {
@@ -31,6 +32,8 @@ namespace EF_Core_CRM.UI
                     return this;
                 case 4:
                     return this;
+                case 5:
+                    return new MainMenu();
                 default:
                     return this;
             }
