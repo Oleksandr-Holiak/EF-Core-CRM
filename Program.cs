@@ -1,10 +1,19 @@
-﻿namespace EF_Core_CRM
+﻿using EF_Core_CRM.UI;
+
+namespace EF_Core_CRM
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            bool isRunning = true;
+
+            IMenu menu = new MainMenu();
+
+            while (isRunning)
+            {
+                menu = await menu.Show();
+            }
         }
     }
 }
