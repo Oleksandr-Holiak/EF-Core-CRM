@@ -26,7 +26,7 @@ namespace EF_Core_CRM.UI
                 case 1:
                     return this;
                 case 2:
-                    return this;
+                    return new WorkerLoginMenu();
                 default:
                     Console.WriteLine("Wrong selection");
                     return this;
