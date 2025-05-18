@@ -12,7 +12,14 @@ namespace EF_Core_CRM
 
             while (isRunning)
             {
-                menu = await menu.Show();
+                await menu.Show();
+
+                IMenu responceMenu = menu;
+                while (menu == responceMenu)
+                {
+                    responceMenu = await menu.Get(Console.ReadLine());
+                }
+                menu = responceMenu;
             }
         }
     }

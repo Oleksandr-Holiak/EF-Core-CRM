@@ -8,6 +8,7 @@ namespace EF_Core_CRM.UI
 {
     public interface IMenu
     {
-        Task<IMenu> Show();
+        Task Show();
+        Task<IMenu> Get(string input);
     }
 }

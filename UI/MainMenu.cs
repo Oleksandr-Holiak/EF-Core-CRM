@@ -9,19 +9,19 @@ namespace EF_Core_CRM.UI
 {
     class MainMenu : IMenu
     {
-        public async Task<IMenu> Show()
+        public async Task Show()
         {
             Console.WriteLine(
                 "Welcome to CRM system\n" +
                 "Who are you?\n" +
                 "1. I am customer\n" +
                 "2. I am worker");
-
-            string? response = Console.ReadLine();
-
+        }
+        public async Task<IMenu> Get(string input)
+        {
             int number;
 
-            bool success = int.TryParse(response, out number);
+            bool success = int.TryParse(input, out number);
 
             switch (number)
             {
