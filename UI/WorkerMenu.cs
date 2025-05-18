@@ -25,13 +25,13 @@ namespace EF_Core_CRM.UI
             switch (result)
             {
                 case 1:
-                    return this;
+                    throw new NotImplementedException();
                 case 2:
-                    return this;
+                    throw new NotImplementedException();
                 case 3:
-                    return this;
+                    throw new NotImplementedException();
                 case 4:
-                    return this;
+                    throw new NotImplementedException();
                 case 5:
                     return new MainMenu();
                 default:

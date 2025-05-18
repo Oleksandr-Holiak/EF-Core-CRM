@@ -24,7 +24,7 @@ namespace EF_Core_CRM.UI
             switch (number)
             {
                 case 1:
-                    return this;
+                    throw new NotImplementedException();
                 case 2:
                     return new WorkerLoginMenu();
                 default:
