@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EF_Core_CRM.UI
 {
-    class WorkerLoginMenu : IMenu
+    class LoginMenu : IMenu
     {
         private string? _login;
         private string? _password;

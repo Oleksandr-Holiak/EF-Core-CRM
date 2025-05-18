@@ -13,9 +13,8 @@ namespace EF_Core_CRM.UI
         {
             Console.WriteLine(
                 "Welcome to CRM system\n" +
-                "Who are you?\n" +
-                "1. I am customer\n" +
-                "2. I am worker");
+                "1. Log in\n" +
+                "2. Exit");
         }
         public async Task<IMenu> Get(string input)
         {
@@ -24,9 +23,9 @@ namespace EF_Core_CRM.UI
             switch (number)
             {
                 case 1:
-                    throw new NotImplementedException();
+                    return new LoginMenu();
                 case 2:
-                    return new WorkerLoginMenu();
+                    return null;
                 default:
                     ConsoleHelper.WriteError("Wrong selection");
                     return this;
