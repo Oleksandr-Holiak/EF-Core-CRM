@@ -12,6 +12,8 @@ namespace EF_Core_CRM
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            AppSettings.LoadConfiguraion();
+
             optionsBuilder.
                 UseSqlServer(Environment.GetEnvironmentVariable("DbConnectionString"));
         }

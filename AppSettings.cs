@@ -11,13 +11,13 @@ namespace EF_Core_CRM
     static class AppSettings
     {
         private static readonly string fileName = "AppSettings.json";
-        public static async Task LoadConfiguraion()
+        public static void LoadConfiguraion()
         {
             string pathToFile = Path.Combine(Directory.GetCurrentDirectory(), fileName);
 
             if (File.Exists(pathToFile))
             {
-                string json = await File.ReadAllTextAsync(pathToFile);
+                string json = File.ReadAllText(pathToFile);
 
                 Dictionary<string, string> settings = JsonSerializer.Deserialize<Dictionary<string, string>>(json);
 
