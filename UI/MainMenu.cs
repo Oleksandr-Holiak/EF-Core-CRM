@@ -19,9 +19,7 @@ namespace EF_Core_CRM.UI
         }
         public async Task<IMenu> Get(string input)
         {
-            int number;
-
-            bool success = int.TryParse(input, out number);
+            int number = input.ParseToInt();
 
             switch (number)
             {
