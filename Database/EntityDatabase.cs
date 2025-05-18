@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF_Core_CRM
+namespace EF_Core_CRM.Database
 {
     class EntityDatabase : DbContext
     {
