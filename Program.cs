@@ -20,6 +20,8 @@ namespace EF_Core_CRM
                     responceMenu = await menu.Get(Console.ReadLine());
                 }
                 menu = responceMenu;
+
+                if (menu == null) isRunning = false;
             }
         }
     }
