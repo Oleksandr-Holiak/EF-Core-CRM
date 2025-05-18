@@ -19,7 +19,7 @@ namespace EF_Core_CRM.Database
             
             _account = await db.Customers.Where(u => u.Email == _email).SingleOrDefaultAsync();
             
-            if (_account is not null) _account = await db.Users.Where(u => u.Email == _email).FirstAsync();
+            if (_account is null) _account = await db.Users.Where(u => u.Email == _email).SingleOrDefaultAsync();
 
             return _account is not null;
         }
