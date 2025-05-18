@@ -13,7 +13,7 @@ namespace EF_Core_CRM.UI
         public async Task Show()
         {
             Console.WriteLine(
-                "You are trying to login as worker\n" +
+                "Log in screen\n" +
                 "Enter your login");
         }
         public async Task<IMenu> Get(string input)
